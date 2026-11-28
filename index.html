@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Little Merch Lab 🌿</title>
+  <meta name="description" content="Tra cứu đơn merch, cập nhật địa chỉ và mã vận đơn." />
+  <meta name="theme-color" content="#7BC89C" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- CSP: chỉ cho phép script từ chính site + CDN đã pin; chặn XSS chèn script lạ -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdn.jsdelivr.net https://cdn.sheetjs.com https://challenges.cloudflare.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src https://fonts.gstatic.com;
+    img-src 'self' data: blob: https://*.supabase.co;
+    connect-src 'self' https://*.supabase.co https://cdn.jsdelivr.net https://cdn.sheetjs.com;
+    frame-src https://challenges.cloudflare.com;
+    base-uri 'self'; form-action 'self';" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-mark.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap&subset=vietnamese" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#/">
+        <img class="brand-mark" src="assets/img/logo-mark.svg" alt="" width="40" height="40"/>
+        <span class="brand-text">Little Merch Lab</span>
+      </a>
+      <nav class="nav" id="nav"></nav>
+    </div>
+  </header>
+
+  <main class="container" id="app" tabindex="-1"></main>
+
+  <footer class="footer container">
+    <span>Made with 💚 by Little Merch Lab</span><br/><span>Dữ liệu của bạn chỉ hiển thị khi nhập đúng SĐT.</span>
+  </footer>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
